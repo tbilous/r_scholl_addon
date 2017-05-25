@@ -1,7 +1,7 @@
 import React, { DOM } from 'react';
 
-const TextBox = ({post}) => (
-  DOM.span(null, post.text)
+const TextBox = ({ text }) => (
+  DOM.span(null, text)
 );
 
 export default TextBox;

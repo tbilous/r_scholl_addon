@@ -1,12 +1,13 @@
 import React from "react";
 
-const Image = ( {post} ) => (
+const Image = ({image, width, height, alt}) => (
   <img
-    src={post.image.src}
-    width="100"
-    height="50"
-    alt="Post img"
+    src={image}
+    width={width}
+    height={height}
+    alt={alt}
   />
 );
+
 
 export default Image;

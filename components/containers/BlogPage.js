@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import BlogList from '../ui/BlogList';
 
@@ -29,17 +29,20 @@ const posts = [
   }
 ];
 
-class BlogPage extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { posts }
-  }
+export default class BlogPage extends Component {
   render() {
-    const { posts } = this.state;
-    return React.createElement(BlogList, { posts });
+    return (
+      <BlogList posts={posts} />
+    );
   }
 }
 
-
-export default BlogPage;
+// class BlogPage extends React.Component {
+//   constructor(props) {
+//     super(props);
+//   }
+//   render() {
+//     const { posts } = this.props;
+//     return React.createElement(BlogList, { posts });
+//   }
+// }

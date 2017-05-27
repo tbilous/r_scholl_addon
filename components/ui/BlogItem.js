@@ -1,5 +1,8 @@
 import React, { DOM } from 'react';
 
+import Image from './Image';
+import TextBox from './TextBox';
+
 const BlogItem = (props) => (
   DOM.ul(
     {
@@ -10,8 +13,11 @@ const BlogItem = (props) => (
         textAlign: 'center'
       }
     }
-    , props.children
+    ,
+    DOM.li(null, React.createElement(TextBox, {text: props.post.text})),
+    DOM.li(null, React.createElement(Image, {image: props.post.image}))
   )
 );
+
 
 export default BlogItem;

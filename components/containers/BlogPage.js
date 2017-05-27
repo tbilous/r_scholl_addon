@@ -31,8 +31,6 @@ const posts = [
 
 export default class BlogPage extends Component {
   render() {
-    return (
-      <BlogList posts={posts} />
-    );
+    return React.createElement(BlogList, { posts });
   }
 }

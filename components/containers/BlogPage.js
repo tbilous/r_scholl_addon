@@ -36,13 +36,3 @@ export default class BlogPage extends Component {
     );
   }
 }
-
-// class BlogPage extends React.Component {
-//   constructor(props) {
-//     super(props);
-//   }
-//   render() {
-//     const { posts } = this.props;
-//     return React.createElement(BlogList, { posts });
-//   }
-// }

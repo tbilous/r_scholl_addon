@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-
+import React, { DOM } from 'react';
 import _ from 'lodash';
 
 import BlogItem from './BlogItem';
@@ -12,13 +11,18 @@ class BlogList extends React.Component {
   render() {
     const { posts } = this.props;
     return (
-      <div>
-        {
-          _.map(posts, (post) => {
-            return <BlogItem key={post.id} post={post} />
-          })
-        }
-      </div>
+      DOM.div(
+        null,
+        _.map(
+          posts,
+          (post) => (
+            React.createElement(
+              BlogItem,
+              { key: post.id, post }
+            )
+          )
+        )
+      )
     );
   }
 }

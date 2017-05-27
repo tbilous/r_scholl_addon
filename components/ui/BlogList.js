@@ -4,7 +4,7 @@ import _ from 'lodash';
 import BlogItem from './BlogItem';
 
 
-class BlogList extends React.Component {
+export default class BlogList extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -27,4 +27,3 @@ class BlogList extends React.Component {
   }
 }
 
-export default BlogList;
